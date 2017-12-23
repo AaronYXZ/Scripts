@@ -1,3 +1,18 @@
+## Set color palette
+sns.set_palette("husl")
+
+## Set color palette and choose one for ploting
+colors = sns.color_palette()
+sns.countplot(x="class", data=titanic, color = colors[1)
+
+
+## Countplot 
+
+sns.countplot(x="class", data=titanic)
+                                                      
+                                                     
+
+                                                  
 ## Correlation Map (Heatmap)
 
 corr = df.corr()
