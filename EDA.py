@@ -1,3 +1,33 @@
+
+## Line and marker styles
+
+x = np.linspace(0, 5, 10)
+colors = sns.color_palette('husl')
+
+
+fig, ax = plt.subplots(figsize=(12,6))
+
+ax.plot(x, x+2, color=colors[0], linewidth=0.50)
+ax.plot(x, x+4, color=colors[0], linewidth=2.00)
+
+# possible linestype options ‘-‘, ‘--’, ‘-.’, ‘:’, ‘steps’
+ax.plot(x, x+5, color=colors[1], lw=2, linestyle='-')
+ax.plot(x, x+6, color=colors[1], lw=2, ls='-.')
+ax.plot(x, x+7, color=colors[1], lw=2, ls=':')
+
+# possible marker symbols: marker = '+', 'o', '*', 's', ',', '.', '1', '2', '3', '4', ...
+ax.plot(x, x+ 9, color=colors[2], lw=2, ls='--', marker='+')
+ax.plot(x, x+10, color=colors[2], lw=2, ls='--', marker='o')
+ax.plot(x, x+11, color=colors[2], lw=2, ls='--', marker='s')
+ax.plot(x, x+12, color=colors[2], lw=2, ls='--', marker='1')
+
+# marker size and color
+ax.plot(x, x+13, color=colors[3], lw=1, ls='-', marker='o', markersize=2)
+ax.plot(x, x+15, color=colors[3], lw=1, ls='-', marker='o', markersize=4, markerfacecolor="red")
+ax.plot(x, x+16, color=colors[3], lw=1, ls='-', marker='s', markersize=4, 
+        markerfacecolor="yellow", markeredgewidth=2, markeredgecolor="blue");
+
+
 ## Set color palette
 sns.set_palette("husl")
 
