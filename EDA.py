@@ -5,14 +5,14 @@ sns.set_palette("husl")
 colors = sns.color_palette()
 sns.countplot(x="class", data=titanic, color = colors[1)
 
-
-## Countplot 
-
-sns.countplot(x="class", data=titanic)
+## Countplot
                                                       
-                                                     
+sns.countplot(x = 'class', data = tiantic)
 
-                                                  
+## Barplot
+ 
+sns.barplot(x="day", y="total_bill", data=tips)
+            
 ## Correlation Map (Heatmap)
 
 corr = df.corr()
