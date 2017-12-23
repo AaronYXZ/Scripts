@@ -28,6 +28,15 @@ ax.plot(x, x+16, color=colors[3], lw=1, ls='-', marker='s', markersize=4,
         markerfacecolor="yellow", markeredgewidth=2, markeredgecolor="blue");
 
 
+## set 
+
+ax.set_xlim([0.5, 4.5])
+ax.set_ylim([-2, 8])
+ax.set_title('An Example Axes')
+ax.set_ylabel('Y-Axis')
+ax.set_xlabel('X-Axis')
+
+
 ## Set color palette
 sns.set_palette("husl")
 
