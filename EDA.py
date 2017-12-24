@@ -27,6 +27,11 @@ ax.plot(x, x+15, color=colors[3], lw=1, ls='-', marker='o', markersize=4, marker
 ax.plot(x, x+16, color=colors[3], lw=1, ls='-', marker='s', markersize=4, 
         markerfacecolor="yellow", markeredgewidth=2, markeredgecolor="blue");
 
+## rotation
+plt.xticks(rotation = "vertical")
+plt.xticks(rotation = 45)
+plt.xticks(rotation = -45)
+
 
 ## set 
 
