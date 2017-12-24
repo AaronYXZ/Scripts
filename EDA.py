@@ -44,6 +44,10 @@ sns.set_palette("husl")
 colors = sns.color_palette()
 sns.countplot(x="class", data=titanic, color = colors[1)
 
+## tight layout
+                                                          
+fig.tight_layout()
+                                                      
 ## Countplot
                                                       
 sns.countplot(x = 'class', data = tiantic)
