@@ -25,3 +25,15 @@ def runXGB(train_X, train_y, test_X, test_y=None, feature_names=None, seed_val=0
 
     pred_test_y = model.predict(xgtest)
     return pred_test_y, model
+
+
+%%time
+cv_scores = []
+kf = KFold(n_splits=5, shuffle=True, random_state=2016)
+for dev_index, val_index in kf.split(range(train_x.shape[0])):
+        dev_X, val_X = train_x.ix[dev_index,:], train_x.ix[val_index,:]
+        dev_y, val_y = train_y.ix[dev_index], train_y.ix[val_index]
+        preds, model = runXGB(dev_X, dev_y, val_X, val_y)
+        cv_scores.append(log_loss(val_y, preds))
+        print(cv_scores)
+        break
