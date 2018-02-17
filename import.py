@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import sklearn
 import statsmodels.api as sm
 import math
+import gc
 import json
 from sklearn.model_selection import train_test_split, KFold
 from sklearn.ensemble import BaggingClassifier, RandomForestClassifier, GradientBoostingClassifier 
